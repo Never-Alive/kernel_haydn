@@ -646,6 +646,10 @@ static inline bool vma_is_shared_maywrite(struct vm_area_struct *vma)
 {
 	return is_shared_maywrite(vma->vm_flags);
 }
+static inline bool vma_is_accessible(struct vm_area_struct *vma)
+{
+	return vma->vm_flags & (VM_READ | VM_EXEC | VM_WRITE);
+}
 
 #ifdef CONFIG_SHMEM
 /*
