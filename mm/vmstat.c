@@ -1940,6 +1940,7 @@ static int vmstat_cpu_online(unsigned int cpu)
 {
 	refresh_zone_stat_thresholds();
 	node_set_state(cpu_to_node(cpu), N_CPU);
+
 	return 0;
 }
 
