@@ -288,6 +288,10 @@
 	};
 
 	firmware {
+		android {
+			/delete-node/ fstab;
+			/delete-node/ vbmeta;
+		};
 		scm {
 			compatible = "qcom,scm-msm8998", "qcom,scm";
 		};
